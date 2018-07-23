@@ -34,5 +34,33 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "testTable": {
+    "dataSource": "db",
+    "public": false
+  },
+  "speciality": {
+    "dataSource": "db",
+    "public": true
+  },
+  "recurrence": {
+    "dataSource": "db",
+    "public": true
+  },
+  "doctor": {
+    "dataSource": "db",
+    "public": true
+  },
+  "clinic": {
+    "dataSource": "db",
+    "public": true
+  },
+  "supervisor": {
+    "dataSource": "db",
+    "public": true
+  },
+  "patient": {
+    "dataSource": "db",
+    "public": true
   }
 }

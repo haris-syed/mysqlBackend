@@ -1,6 +1,16 @@
 {
-  "db": {
-    "name": "db",
+  "db2": {
+    "name": "db2",
     "connector": "memory"
+  },
+  "db": {
+    "host": "127.0.0.1",
+    "port": 3306,
+    "url": "",
+    "database": "testdb",
+    "password": "",
+    "name": "db",
+    "user": "root",
+    "connector": "mysql"
   }
 }
