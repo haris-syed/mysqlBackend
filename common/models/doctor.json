@@ -6,16 +6,19 @@
     "validateUpsert": true
   },
   "properties": {
-    "spec_id": {
-      "type": "number"
-    },
     "name": {
       "type": "string",
       "required": true
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "assignments": {
+      "type": "hasOne",
+      "model": "doctor_assignment",
+      "foreignKey": "doc_id"
+    }
+  },
   "acls": [],
   "methods": {}
 }

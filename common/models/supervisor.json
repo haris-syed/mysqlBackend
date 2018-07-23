@@ -12,7 +12,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "assignments": {
+      "type": "hasOne",
+      "model": "doctor_assignment",
+      "foreignKey": "sup_id"
+    }
+  },
   "acls": [],
   "methods": {}
 }

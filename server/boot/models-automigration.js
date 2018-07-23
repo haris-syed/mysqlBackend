@@ -1,6 +1,6 @@
 module.exports = function(app) {
   var dataSource = app.dataSources.db;
-  dataSource.autoupdate(null, function (err) {
+  dataSource.automigrate(null, function (err) {
     if (err) return;
   });
 };

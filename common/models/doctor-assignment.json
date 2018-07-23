@@ -1,24 +1,22 @@
 {
-  "name": "speciality",
+  "name": "doctor_assignment",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
-      "type": "string",
+    "start_time": {
+      "type": "date",
+      "required": true
+    },
+    "end_time": {
+      "type": "date",
       "required": true
     }
   },
   "validations": [],
-  "relations": {
-    "doctors": {
-      "type": "hasMany",
-      "model": "doctor",
-      "foreignKey": "spec_id"
-    }
-  },
+  "relations": {},
   "acls": [],
   "methods": {}
 }

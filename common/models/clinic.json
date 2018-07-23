@@ -18,7 +18,18 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "assignments": {
+      "type": "hasOne",
+      "model": "doctor_assignment",
+      "foreignKey": "clinic_id"
+    },
+    "frontdesk":{
+      "type":"hasOne",
+      "model":"frontdesk",
+      "foreignKey":"clinic_id"
+    }
+  },
   "acls": [],
   "methods": {}
 }

@@ -1,5 +1,5 @@
 {
-  "name": "speciality",
+  "name": "frontdesk",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -7,18 +7,11 @@
   },
   "properties": {
     "name": {
-      "type": "string",
-      "required": true
+      "type": "string"
     }
   },
   "validations": [],
-  "relations": {
-    "doctors": {
-      "type": "hasMany",
-      "model": "doctor",
-      "foreignKey": "spec_id"
-    }
-  },
+  "relations": {},
   "acls": [],
   "methods": {}
 }

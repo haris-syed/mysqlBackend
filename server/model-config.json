@@ -62,5 +62,13 @@
   "patient": {
     "dataSource": "db",
     "public": true
+  },
+  "doctor_assignment": {
+    "dataSource": "db",
+    "public": true
+  },
+  "frontdesk": {
+    "dataSource": "db",
+    "public": true
   }
 }
