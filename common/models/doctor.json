@@ -14,7 +14,7 @@
   "validations": [],
   "relations": {
     "assignments": {
-      "type": "hasOne",
+      "type": "hasMany",
       "model": "doctor_assignment",
       "foreignKey": "doc_id"
     }

@@ -1,11 +1,14 @@
 {
-  "name": "doctor_assignment",
+  "name": "appointment",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
+    "status": {
+      "type": "string"
+    },
     "start_time": {
       "type": "date",
       "required": true
@@ -13,16 +16,15 @@
     "end_time": {
       "type": "date",
       "required": true
+    },
+    "priority": {
+      "type": "number",
+      "required": true,
+      "default": 0
     }
   },
   "validations": [],
-  "relations": {
-    "appointment": {
-      "type": "hasMany",
-      "model": "appointment",
-      "foreignKey": "assign_id"
-    }
-  },
+  "relations": {},
   "acls": [],
   "methods": {}
 }

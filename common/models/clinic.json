@@ -20,14 +20,29 @@
   "validations": [],
   "relations": {
     "assignments": {
-      "type": "hasOne",
+      "type": "hasMany",
       "model": "doctor_assignment",
       "foreignKey": "clinic_id"
     },
-    "frontdesk":{
-      "type":"hasOne",
-      "model":"frontdesk",
-      "foreignKey":"clinic_id"
+    "frontdesk": {
+      "type": "hasOne",
+      "model": "frontdesk",
+      "foreignKey": "clinic_id"
+    },
+    "specialityAssignments": {
+      "type": "hasMany",
+      "model": "speciality_assignment",
+      "foreignKey": "clinic_id"
+    },
+    "scheduledAppointments": {
+      "type": "hasMany",
+      "model": "scheduled_appointment",
+      "foreignKey": "clinic_id"
+    },
+    "openlists": {
+      "type": "hasMany",
+      "model": "openlist",
+      "foreignKey": "clinic_id"
     }
   },
   "acls": [],

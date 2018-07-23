@@ -26,7 +26,23 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "appointment": {
+      "type": "hasMany",
+      "model": "appointment",
+      "foreignKey": "pat_id"
+    },
+    "scheduledAppointments": {
+      "type": "hasMany",
+      "model": "scheduled_appointment",
+      "foreignKey": "pat_id"
+    },
+    "openlists": {
+      "type": "hasMany",
+      "model": "openlist",
+      "foreignKey": "pat_id"
+    }
+  },
   "acls": [],
   "methods": {}
 }

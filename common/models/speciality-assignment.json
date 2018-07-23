@@ -1,5 +1,5 @@
 {
-  "name": "doctor_assignment",
+  "name": "speciality_assignment",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -13,16 +13,14 @@
     "end_time": {
       "type": "date",
       "required": true
+    },
+    "noOfDoctors": {
+      "type": "number",
+      "required": true
     }
   },
   "validations": [],
-  "relations": {
-    "appointment": {
-      "type": "hasMany",
-      "model": "appointment",
-      "foreignKey": "assign_id"
-    }
-  },
+  "relations": {},
   "acls": [],
   "methods": {}
 }

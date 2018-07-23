@@ -70,5 +70,21 @@
   "frontdesk": {
     "dataSource": "db",
     "public": true
+  },
+  "appointment": {
+    "dataSource": "db",
+    "public": true
+  },
+  "speciality_assignment": {
+    "dataSource": "db",
+    "public": true
+  },
+  "scheduled_appointment": {
+    "dataSource": "db",
+    "public": true
+  },
+  "openlist": {
+    "dataSource": "db",
+    "public": true
   }
 }

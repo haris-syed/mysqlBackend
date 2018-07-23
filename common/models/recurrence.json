@@ -18,8 +18,18 @@
   "validations": [],
   "relations": {
     "assignments": {
-      "type": "hasOne",
+      "type": "hasMany",
       "model": "doctor_assignment",
+      "foreignKey": "rec_id"
+    },
+    "appointment": {
+      "type": "hasMany",
+      "model": "appointment",
+      "foreignKey": "rec_id"
+    },
+    "specialityAssignments": {
+      "type": "hasMany",
+      "model": "speciality_assignment",
       "foreignKey": "rec_id"
     }
   },

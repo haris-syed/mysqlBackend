@@ -17,6 +17,11 @@
       "type": "hasMany",
       "model": "doctor",
       "foreignKey": "spec_id"
+    },
+    "specialityAssignments": {
+      "type": "hasMany",
+      "model": "speciality_assignment",
+      "foreignKey": "spec_id"
     }
   },
   "acls": [],

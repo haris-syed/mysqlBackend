@@ -14,8 +14,13 @@
   "validations": [],
   "relations": {
     "assignments": {
-      "type": "hasOne",
+      "type": "hasMany",
       "model": "doctor_assignment",
+      "foreignKey": "sup_id"
+    },
+    "specialityAssignments": {
+      "type": "hasMany",
+      "model": "speciality_assignment",
       "foreignKey": "sup_id"
     }
   },
