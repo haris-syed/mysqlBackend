@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="mydiv">
+  <h1>The XMLHttpRequest Object</h1>
+  <button type="button" onclick="loadDoc()">Get doctors from ajax</button>
+  <br>
+  <div id = "demo" style="width:500px;height:200px;background:#D8FBD6;border:1px dotted black;text-align:center">
+  </div>
+</div>
+
+<script>
+  function loadDoc() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("demo").innerHTML =
+          this.responseText;
+      }
+    };
+    xhttp.open("GET", "/api/doctors", true);
+    xhttp.send();
+  }
+</script>
+
+</body>
+</html>
