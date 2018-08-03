@@ -10,6 +10,7 @@ module.exports = function(app) {
         name: 'Dr.Amir Liaqat'
       }
     };
+
     Doctor.find(filters,function (err,doctors){
       if(err) return;
       res.send(doctors);
