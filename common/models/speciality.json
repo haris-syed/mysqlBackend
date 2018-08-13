@@ -1,12 +1,20 @@
 {
-  "name": "speciality",
+  "name": "Speciality",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Time_Slot": {
+      "type": "number",
+      "required": true
+    },
+    "Description": {
       "type": "string",
       "required": true
     }
@@ -15,13 +23,43 @@
   "relations": {
     "doctors": {
       "type": "hasMany",
-      "model": "doctor",
-      "foreignKey": "spec_id"
+      "model": "Doctor",
+      "foreignKey": "spec_id",
+      "options": {
+        "nestRemoting": true
+      }
     },
-    "specialityAssignments": {
+    "rooms": {
       "type": "hasMany",
-      "model": "speciality_assignment",
-      "foreignKey": "spec_id"
+      "model": "Room",
+      "foreignKey": "spec_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "specAssigns": {
+      "type": "hasMany",
+      "model": "Spec_Assign",
+      "foreignKey": "spec_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "openLists": {
+      "type": "hasMany",
+      "model": "OpenList",
+      "foreignKey": "spec_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "supAllowedManageSpecs": {
+      "type": "hasMany",
+      "model": "Sup_Allowed_Manage_Spec",
+      "foreignKey": "spec_id",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [],

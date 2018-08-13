@@ -1,46 +1,49 @@
 {
-  "name": "patient",
+  "name": "Patient",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
+    "Name": {
       "type": "string",
       "required": true
     },
-    "status": {
-      "type": "string"
+    "DOB": {
+      "type": "date",
+      "required": true
     },
-    "current_status": {
-      "type": "string"
-    },
-    "check_in_time": {
-      "type": "date"
-    },
-    "no_show_ups": {
-      "type": "number",
-      "required": true,
-      "default": 0
+    "Picture": {
+      "type": "string",
+      "required": true
     }
   },
   "validations": [],
   "relations": {
-    "appointment": {
+    "openLists": {
       "type": "hasMany",
-      "model": "appointment",
-      "foreignKey": "pat_id"
+      "model": "OpenList",
+      "foreignKey": "chartno",
+      "options": {
+        "nestRemoting": true
+      }
     },
-    "scheduledAppointments": {
+    "appointments": {
       "type": "hasMany",
-      "model": "scheduled_appointment",
-      "foreignKey": "pat_id"
+      "model": "Appointment",
+      "foreignKey": "chartno",
+      "options": {
+        "nestRemoting": true
+      }
     },
-    "openlists": {
+    "toBeScheduledAppointments": {
       "type": "hasMany",
-      "model": "openlist",
-      "foreignKey": "pat_id"
+      "model": "To_Be_Scheduled_Appointment",
+      "foreignKey": "chartno",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [],

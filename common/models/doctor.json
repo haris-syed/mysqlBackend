@@ -1,22 +1,95 @@
 {
-  "name": "doctor",
+  "name": "Doctor",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
+    "Time_Slot": {
+      "type": "number",
+      "required": false
+    },
+    "Name": {
       "type": "string",
       "required": true
+    },
+    "Address": {
+      "type": "string",
+      "required": false
+    },
+    "Date_Of_Birth": {
+      "type": "date"
+    },
+    "Qualification": {
+      "type": "string"
     }
   },
   "validations": [],
   "relations": {
-    "assignments": {
+    "docSupNotfs": {
       "type": "hasMany",
-      "model": "doctor_assignment",
-      "foreignKey": "doc_id"
+      "model": "Doc_Sup_Notf",
+      "foreignKey": "doc_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "supDocNotfs": {
+      "type": "hasMany",
+      "model": "Sup_Doc_Notf",
+      "foreignKey": "doc_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "docAssigns": {
+      "type": "hasMany",
+      "model": "Doc_Assign",
+      "foreignKey": "doc_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "doctorUnavailabilities": {
+      "type": "hasMany",
+      "model": "Doctor_Unavailability",
+      "foreignKey": "doc_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "rooms": {
+      "type": "hasMany",
+      "model": "Room",
+      "foreignKey": "doc_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "openLists": {
+      "type": "hasMany",
+      "model": "OpenList",
+      "foreignKey": "doc_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "calling": {
+      "type": "hasMany",
+      "model": "OpenList",
+      "foreignKey": "callingdoc_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "supAllowedManageDoctors": {
+      "type": "hasMany",
+      "model": "Sup_Allowed_Manage_Doctor",
+      "foreignKey": "doc_id",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [],

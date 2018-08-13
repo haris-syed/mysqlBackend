@@ -1,0 +1,50 @@
+{
+  "name": "Custom_User",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Picture": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "supervisors": {
+      "type": "hasOne",
+      "model": "supervisor",
+      "foreignKey": "user_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "doctors": {
+      "type": "hasOne",
+      "model": "Doctor",
+      "foreignKey": "user_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "frontdesks": {
+      "type": "hasOne",
+      "model": "Frontdesk",
+      "foreignKey": "user_id",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "administrator",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

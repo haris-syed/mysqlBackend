@@ -1,0 +1,27 @@
+{
+  "name": "OpenListPriority",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Description": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "openLists": {
+      "type": "hasMany",
+      "model": "OpenList",
+      "foreignKey": "priority_id",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

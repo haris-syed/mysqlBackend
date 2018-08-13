@@ -1,36 +1,67 @@
 {
-  "name": "recurrence",
+  "name": "Recurrence",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "start_date": {
+    "Start_Date": {
       "type": "date",
       "required": true
     },
-    "end_date": {
+    "End_Date": {
       "type": "date",
+      "required": false
+    },
+    "Days_List": {
+      "type": [
+        "string"
+      ],
       "required": true
+    },
+    "Ending_Criteria": {
+      "type": "string",
+      "required": true
+    },
+    "End_After_Weeks": {
+      "type": "number",
+      "required": false
     }
   },
   "validations": [],
   "relations": {
-    "assignments": {
+    "docAssigns": {
       "type": "hasMany",
-      "model": "doctor_assignment",
-      "foreignKey": "rec_id"
+      "model": "Doc_Assign",
+      "foreignKey": "rec_id",
+      "options": {
+        "nestRemoting": true
+      }
     },
-    "appointment": {
+    "doctorUnavailabilities": {
       "type": "hasMany",
-      "model": "appointment",
-      "foreignKey": "rec_id"
+      "model": "Doctor_Unavailability",
+      "foreignKey": "rec_id",
+      "options": {
+        "nestRemoting": true
+      }
     },
-    "specialityAssignments": {
+    "specAssigns": {
       "type": "hasMany",
-      "model": "speciality_assignment",
-      "foreignKey": "rec_id"
+      "model": "Spec_Assign",
+      "foreignKey": "rec_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "appointments": {
+      "type": "hasMany",
+      "model": "Appointment",
+      "foreignKey": "rec_id",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [],

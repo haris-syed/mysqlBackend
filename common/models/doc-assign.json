@@ -1,0 +1,35 @@
+{
+  "name": "Doc_Assign",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Start": {
+      "type": "date",
+      "required": true
+    },
+    "End": {
+      "type": "date",
+      "required": true
+    },
+    "No_Of_Slots": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "appointments": {
+      "type": "hasMany",
+      "model": "Appointment",
+      "foreignKey": "doc_as_id",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,11 +1,16 @@
 {
-  "name": "Frontdesk",
+  "name": "OpenList",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "properties": {},
+  "properties": {
+    "TimeStamp": {
+      "type": "date",
+      "required": true
+    }
+  },
   "validations": [],
   "relations": {},
   "acls": [],

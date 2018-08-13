@@ -1,26 +1,33 @@
 {
-  "name": "appointment",
+  "name": "Appointment",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "status": {
+    "Status": {
       "type": "string"
     },
-    "start_time": {
+    "StartDateTime": {
       "type": "date",
       "required": true
     },
-    "end_time": {
+    "Type": {
+      "type": "string",
+      "required": true
+    },
+    "TimeStamp": {
       "type": "date",
       "required": true
     },
-    "priority": {
-      "type": "number",
+    "Confirm": {
+      "type": "boolean",
       "required": true,
-      "default": 0
+      "default": false
+    },
+    "Comments": {
+      "type": "string"
     }
   },
   "validations": [],

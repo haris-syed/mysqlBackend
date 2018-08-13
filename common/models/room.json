@@ -1,26 +1,25 @@
 {
-  "name": "doctor_assignment",
+  "name": "Room",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "start_time": {
-      "type": "date",
-      "required": true
-    },
-    "end_time": {
-      "type": "date",
+    "Name": {
+      "type": "string",
       "required": true
     }
   },
   "validations": [],
   "relations": {
-    "appointment": {
+    "appointments": {
       "type": "hasMany",
-      "model": "appointment",
-      "foreignKey": "assign_id"
+      "model": "Appointment",
+      "foreignKey": "room_id",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [],

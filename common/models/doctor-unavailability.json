@@ -1,0 +1,43 @@
+{
+  "name": "Doctor_Unavailability",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Start_Date": {
+      "type": "date",
+      "required": true
+    },
+    "End_Date": {
+      "type": "date",
+      "required": true
+    },
+    "Approved": {
+      "type": "boolean",
+      "required": true
+    },
+    "Subject": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "docSupNotf": {
+      "type": "belongsTo",
+      "model": "Doc_Sup_Notf",
+      "foreignKey": "doc_unv_id",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

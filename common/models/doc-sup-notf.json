@@ -1,11 +1,17 @@
 {
-  "name": "Frontdesk",
+  "name": "Doc_Sup_Notf",
+  "plural": "Doc_Sup_Notfs",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "properties": {},
+  "properties": {
+    "Timestamp": {
+      "type": "date",
+      "required": true
+    }
+  },
   "validations": [],
   "relations": {},
   "acls": [],

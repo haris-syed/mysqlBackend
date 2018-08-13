@@ -1,48 +1,93 @@
 {
-  "name": "clinic",
+  "name": "Clinic",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
+    "Name": {
       "type": "string",
       "required": true
     },
-    "address": {
-      "type": "string"
-    },
-    "area": {
-      "type": "string"
+    "Address": {
+      "type": "string",
+      "required": true
     }
   },
   "validations": [],
   "relations": {
-    "assignments": {
+    "docAssigns": {
       "type": "hasMany",
-      "model": "doctor_assignment",
-      "foreignKey": "clinic_id"
+      "model": "Doc_Assign",
+      "foreignKey": "clinic_id",
+      "options": {
+        "nestRemoting": true
+      }
     },
-    "frontdesk": {
-      "type": "hasOne",
-      "model": "frontdesk",
-      "foreignKey": "clinic_id"
-    },
-    "specialityAssignments": {
+    "doctorUnavailabilities": {
       "type": "hasMany",
-      "model": "speciality_assignment",
-      "foreignKey": "clinic_id"
+      "model": "Doctor_Unavailability",
+      "foreignKey": "clinic_id",
+      "options": {
+        "nestRemoting": true
+      }
     },
-    "scheduledAppointments": {
+    "rooms": {
       "type": "hasMany",
-      "model": "scheduled_appointment",
-      "foreignKey": "clinic_id"
+      "model": "Room",
+      "foreignKey": "clinic_id",
+      "options": {
+        "nestRemoting": true
+      }
     },
-    "openlists": {
+    "frontdesks": {
       "type": "hasMany",
-      "model": "openlist",
-      "foreignKey": "clinic_id"
+      "model": "Frontdesk",
+      "foreignKey": "clinic_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "specAssigns": {
+      "type": "hasMany",
+      "model": "Spec_Assign",
+      "foreignKey": "clinic_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "openLists": {
+      "type": "hasMany",
+      "model": "OpenList",
+      "foreignKey": "clinic_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "targetoftoBeScheduledAppointments": {
+      "type": "hasMany",
+      "model": "To_Be_Scheduled_Appointment",
+      "foreignKey": "target_clinic_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "originoftoBeScheduledAppointments": {
+      "type": "hasMany",
+      "model": "To_Be_Scheduled_Appointment",
+      "foreignKey": "origin_clinic_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "supAllowedManageClinics": {
+      "type": "hasMany",
+      "model": "Sup_Allowed_Manage_Clinic",
+      "foreignKey": "clinic_id",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [],

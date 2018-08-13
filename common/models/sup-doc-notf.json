@@ -1,16 +1,16 @@
 {
-  "name": "testTable",
+  "name": "Sup_Doc_Notf",
   "base": "PersistedModel",
-  "idInjection": false,
+  "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "testid": {
-      "type": "string",
+    "Timestamp": {
+      "type": "date",
       "required": true
     },
-    "name": {
+    "Status": {
       "type": "string",
       "required": true
     }

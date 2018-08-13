@@ -1,0 +1,62 @@
+{
+  "name": "Spec_Assign",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Start_Date": {
+      "type": "date",
+      "required": true
+    },
+    "End_Date": {
+      "type": "date",
+      "required": true
+    },
+    "No_Of_Doctors": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "docAssigns": {
+      "type": "hasMany",
+      "model": "Doc_Assign",
+      "foreignKey": "spec_as_id",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "appointments": {
+      "type": "hasMany",
+      "model": "Appointment",
+      "foreignKey": "spec_as_id",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {
+    "getSpecAssigns": {
+      "accepts": [],
+      "returns": [
+        {
+          "arg": "specassigns",
+          "type": "array",
+          "root": false,
+          "description": ""
+        }
+      ],
+      "description": "get spec assignments for given specialiites and clinics in the given date range",
+      "http": [
+        {
+          "path": "/api/getspecassigns",
+          "verb": "get"
+        }
+      ]
+    }
+  }
+}

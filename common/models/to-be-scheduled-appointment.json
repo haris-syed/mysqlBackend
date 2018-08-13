@@ -1,13 +1,18 @@
 {
-  "name": "openlist",
+  "name": "To_Be_Scheduled_Appointment",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "free_slots": {
-      "type": "number"
+    "Patient_status": {
+      "type": "string",
+      "required": true
+    },
+    "TimeStamp": {
+      "type": "date",
+      "required": true
     }
   },
   "validations": [],

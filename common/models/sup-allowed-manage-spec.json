@@ -1,5 +1,5 @@
 {
-  "name": "Frontdesk",
+  "name": "Sup_Allowed_Manage_Spec",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {

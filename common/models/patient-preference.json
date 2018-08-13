@@ -1,0 +1,26 @@
+{
+  "name": "PatientPreference",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Start_time": {
+      "type": "date"
+    },
+    "End_time": {
+      "type": "date"
+    },
+    "Start_Date": {
+      "type": "date"
+    },
+    "End_Date": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

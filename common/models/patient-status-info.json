@@ -1,22 +1,21 @@
 {
-  "name": "speciality_assignment",
+  "name": "PatientStatusInfo",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "start_time": {
-      "type": "date",
-      "required": true
+    "Current_Status": {
+      "type": "string"
     },
-    "end_time": {
-      "type": "date",
-      "required": true
+    "Check_in_time": {
+      "type": "date"
     },
-    "noOfDoctors": {
+    "NoShowUps": {
       "type": "number",
-      "required": true
+      "required": true,
+      "default": 0
     }
   },
   "validations": [],

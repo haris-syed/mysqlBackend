@@ -35,55 +35,99 @@
     "dataSource": "db",
     "public": false
   },
-  "testTable": {
-    "dataSource": "db",
-    "public": false
-  },
-  "speciality": {
-    "dataSource": "db",
-    "public": true
-  },
-  "recurrence": {
-    "dataSource": "db",
-    "public": true
-  },
-  "doctor": {
-    "dataSource": "db",
-    "public": true
-  },
-  "clinic": {
-    "dataSource": "db",
-    "public": true
-  },
   "supervisor": {
     "dataSource": "db",
     "public": true
   },
-  "patient": {
+  "Doc_Sup_Notf": {
     "dataSource": "db",
     "public": true
   },
-  "doctor_assignment": {
+  "Sup_Doc_Notf": {
     "dataSource": "db",
     "public": true
   },
-  "frontdesk": {
+  "Sup_Allowed_Manage_Doctor": {
     "dataSource": "db",
     "public": true
   },
-  "appointment": {
+  "Sup_Allowed_Manage_Spec": {
     "dataSource": "db",
     "public": true
   },
-  "speciality_assignment": {
+  "Doc_Assign": {
     "dataSource": "db",
     "public": true
   },
-  "scheduled_appointment": {
+  "Sup_Allowed_Manage_Clinic": {
     "dataSource": "db",
     "public": true
   },
-  "openlist": {
+  "Doctor": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Recurrence": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Doctor_Unavailability": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Spec_Assign": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Speciality": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Room": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Clinic": {
+    "dataSource": "db",
+    "public": true
+  },
+  "OpenList": {
+    "dataSource": "db",
+    "public": true
+  },
+  "OpenListPriority": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Frontdesk": {
+    "dataSource": "db",
+    "public": true
+  },
+  "To_Be_Scheduled_Appointment": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Appointment": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Appointment_Priority": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Patient": {
+    "dataSource": "db",
+    "public": true
+  },
+  "PatientPreference": {
+    "dataSource": "db",
+    "public": true
+  },
+  "PatientStatusInfo": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Custom_User": {
     "dataSource": "db",
     "public": true
   }

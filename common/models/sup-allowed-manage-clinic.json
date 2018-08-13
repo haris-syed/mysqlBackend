@@ -1,5 +1,5 @@
 {
-  "name": "scheduled_appointment",
+  "name": "Sup_Allowed_Manage_Clinic",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
